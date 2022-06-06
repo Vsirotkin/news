@@ -132,7 +132,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Authorisation
-
 AUTH_USER_MODEL = 'users.CustomUser'
 
 # Login, Logout
@@ -142,3 +141,6 @@ LOGOUT_REDIRECT_URL = 'home'
 
 # Cryspy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Email BackEnd
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
