@@ -1,0 +1,12 @@
+<!-- templates/article_new.html -->
+
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h1>New Article</h1>
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="button" class="btn btn-primary">Save</button>
+    </form>
+{% endblock content %}
