@@ -39,8 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # own
+    # local
     'users.apps.UsersConfig',
+    'pages.apps.PagesConfig',
+    'articles.apps.ArticlesConfig',
+
+    # 3rd Party
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -128,9 +133,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Authorisation
-
 AUTH_USER_MODEL = 'users.CustomUser'
 
 # Login, Logout
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+
+# Cryspy Forms
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Email BackEnd
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
